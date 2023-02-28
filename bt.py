@@ -8,7 +8,6 @@ class BinaryTree:
             if not node:
                 if count == n:
                     flag = True
-                count = 0
                 return flag
 
             count += node.val
@@ -18,6 +17,23 @@ class BinaryTree:
             return flag
 
         return walk(self.root, 0, False, n)
+
+    def contains_weight2(self, n):
+
+        def leaf_has_weight(root, target, weight_so_far=0):
+
+            if not root:
+                return False
+
+            my_weight = weight_so_far + root.val
+
+            if not root.left and not root.right:
+                return target == my_weight
+
+            return (leaf_has_weight(root.left, target, my_weight) or
+                    leaf_has_weight(root.right, target, my_weight))
+
+        return leaf_has_weight(self.root, n)
 
 
 class Node:
@@ -61,7 +77,7 @@ if __name__ == "__main__":
 
     tree = BinaryTree(node5)
 
-    print(tree.contains_weight1(86))
+    print(tree.contains_weight2(86))
 
 
 

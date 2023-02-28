@@ -9,12 +9,14 @@ def test_true_path_15(tree1):
 def test_true_path_14(tree1):
     assert tree1.contains_weight1(14)
 
+
 def test_true_path_17(tree1):
     assert tree1.contains_weight1(17)
 
 
 def test_true_path_27(tree1):
     assert tree1.contains_weight1(27)
+
 
 def test_true_path_85(tree1):
     assert tree1.contains_weight1(85)
@@ -24,7 +26,7 @@ def test_true_path_95(tree1):
     assert tree1.contains_weight1(95)
 
 
-def test_true_path_17(tree1):
+def test_true_path_46(tree1):
     assert tree1.contains_weight1(46)
 
 
@@ -34,6 +36,43 @@ def test_true_path_86(tree1):
 
 def test_false_path_10(tree1):
     assert not tree1.contains_weight1(10)
+
+
+# Second function
+def test_true_path2_15(tree1):
+    assert tree1.contains_weight2(15)
+
+
+def test_true_path2_14(tree1):
+    assert tree1.contains_weight2(14)
+
+
+def test_true_path2_17(tree1):
+    assert tree1.contains_weight2(17)
+
+
+def test_true_path2_27(tree1):
+    assert tree1.contains_weight2(27)
+
+
+def test_true_path2_85(tree1):
+    assert tree1.contains_weight2(85)
+
+
+def test_true_path2_95(tree1):
+    assert tree1.contains_weight2(95)
+
+
+def test_true_path2_46(tree1):
+    assert tree1.contains_weight2(46)
+
+
+def test_true_path2_86(tree1):
+    assert tree1.contains_weight2(86)
+
+
+def test_false_path2_10(tree1):
+    assert not tree1.contains_weight2(10)
 
 
 @pytest.fixture
